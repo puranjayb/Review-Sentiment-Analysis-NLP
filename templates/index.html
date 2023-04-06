@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Review Sentiment Analysis</title>
+        <link rel="stylesheet" type="text/css" href="static\index.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Review Sentiment Analysis</h1>
+            <form method="POST" action="/predict">
+                <label for="review">Enter your review:</label>
+                <input type="text" id="review" name="review" placeholder="Type your review here...">
+                <br>
+                <input type="submit" value="Check Sentiment">
+            </form>
+            {% if prediction %}
+                <h2>Prediction: {{ prediction }}</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
